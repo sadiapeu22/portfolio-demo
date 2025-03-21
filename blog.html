@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/ee8b546ce4.js" crossorigin="anonymous"></script>
+    <style>
+        /* CSS for the checkbox hack */
+        #menu-toggle {
+            display: none;
+        }
+        
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        #menu-toggle:checked ~ .menu-content {
+            max-height: 100vh;
+        }
+    </style>
+</head>
+    <body class="bg-gray-100 text-gray-800 ">
+        <nav class="container mx-auto px-4 md:px-20 py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl md:text-4xl font-bold">Sadia's Portfolio</div>
+        
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="font-medium">Home</a>
+                    <a href="works.html" class="font-medium">Works</a>
+                    <a href="blog.html" class="text-blue-600 visited:text-red-500 font-bold">Blog</a>
+                    <a href="#" class="font-medium">Contact</a>
+                </div>
+        
+                <!-- Mobile Menu Toggle (Checkbox Hack) -->
+                <div class="md:hidden">
+                    <input type="checkbox" id="menu-toggle" class="hidden peer">
+                    <label for="menu-toggle" class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+        
+                    <!-- Mobile Navigation (Hidden by default, shown when checkbox is checked) -->
+                    <div class="hidden peer-checked:block absolute top-16 right-4 bg-white shadow-lg p-4 rounded-lg">
+                        <div class="flex flex-col space-y-4">
+                            <a href="index.html" class="font-medium">Home</a>
+                            <a href="works.html" class="font-medium">Works</a>
+                            <a href="blog.html" class="text-blue-600 visited:text-red-500 font-bold">Blog</a>
+                            <a href="#" class="font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    
+        <div class="max-w-3xl mx-auto py-8 px-4">
+            <h2 class="text-3xl font-bold mb-6">Blog</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">UI Interactions of the week</h3>
+                    <p class="text-gray-500 text-sm mt-1">12 Feb 2019 | <span class="text-blue-500">Express, Handlebars</span></p>
+                    <p class="text-gray-700 mt-2">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+    
+                <!-- Duplicate Blog Posts -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">UI Interactions of the week</h3>
+                    <p class="text-gray-500 text-sm mt-1">12 Feb 2019 | <span class="text-blue-500">Express, Handlebars</span></p>
+                    <p class="text-gray-700 mt-2">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+    
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">UI Interactions of the week</h3>
+                    <p class="text-gray-500 text-sm mt-1">12 Feb 2019 | <span class="text-blue-500">Express, Handlebars</span></p>
+                    <p class="text-gray-700 mt-2">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+    
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">UI Interactions of the week</h3>
+                    <p class="text-gray-500 text-sm mt-1">12 Feb 2019 | <span class="text-blue-500">Express, Handlebars</span></p>
+                    <p class="text-gray-700 mt-2">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+    <footer class="py-8 flex flex-col items-center">
+        <div class="flex space-x-6 mb-4">
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm">Copyright ©2020 All rights reserved</p>
+    </footer>
+</body>
+</html>

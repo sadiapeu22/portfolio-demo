@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadia - Creative Technologist</title>
+    <script src="https://kit.fontawesome.com/ee8b546ce4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        /* CSS for the checkbox hack */
+        #menu-toggle {
+            display: none;
+        }
+        
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        #menu-toggle:checked ~ .menu-content {
+            max-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="container mx-auto px-4 md:px-20 py-6">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl md:text-4xl font-bold">Sadia's Portfolio</div>
+    
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-600 visited:text-red-500 font-bold">Home</a>
+                <a href="works.html" class="font-medium">Works</a>
+                <a href="blog.html" class="font-medium">Blog</a>
+                <a href="#" class="font-medium">Contact</a>
+            </div>
+    
+            <!-- Mobile Menu Toggle (Checkbox Hack) -->
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+                <label for="menu-toggle" class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+    
+                <!-- Mobile Navigation (Hidden by default, shown when checkbox is checked) -->
+                <div class="hidden peer-checked:block absolute top-16 right-4 bg-white shadow-lg p-4 rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                        <a href="index.html" class="text-blue-600 visited:text-red-500 font-bold">Home</a>
+                        <a href="works.html" class="font-medium">Works</a>
+                        <a href="blog.html" class="font-medium">Blog</a>
+                        <a href="#" class="font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+        <!-- Hero Section -->
+        <section class="px-8 py-12 flex flex-col flex-col-reverse md:mb-10 md:flex-row items-center justify-between bg-white">
+            <div class="md:w-2/3">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">Hi, I am Sadia,</h1>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Creative Technologist</h2>
+                <p class="text-gray-600 mb-6">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet 
+                    sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
+                    consequat sunt nostrud amet.
+                </p>
+                <button class="bg-red-400 hover:bg-red-500 text-white px-5 py-2 rounded-md transition duration-300">
+                    Download Resume
+                </button>
+            </div>
+            <div class="md:w-1/3 flex justify-center mt-8 md:mt-0">
+                <img src="img/11zon_cropped (1).png" alt="John's profile" class="rounded-full w-48 h-48 object-cover object-cover border-2 border-gray-200 mb-4 md:mb-18">
+            </div>
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="px-8 py-6 bg-blue-50">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-medium text-gray-800">Recent posts</h3>
+                <a href="#" class="text-blue-400 text-sm">View all</a>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-sm shadow-sm">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">
+                        Making a design system from scratch
+                    </h4>
+                    <div class="flex text-gray-500 text-sm mb-2">
+                        <span>12 Feb 2020</span>
+                        <span class="mx-2">|</span>
+                        <span>Design, Pattern</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-sm shadow-sm">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">
+                        Creating pixel perfect icons in Figma
+                    </h4>
+                    <div class="flex text-gray-500 text-sm mb-2">
+                        <span>12 Feb 2020</span>
+                        <span class="mx-2">|</span>
+                        <span>Figma, Icon Design</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section class="px-8 py-8">
+            <h3 class="text-xl font-medium text-gray-800 mb-6">Featured works</h3>
+            
+            <!-- Work Item 1 -->
+            <div class="flex flex-col md:flex-row mb-8 border-b pb-8">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="img/9fctqIx3WOvTOmQPbiAIm2cS9A.avif" alt="Dashboard design" class="rounded-sm">
+                </div>
+                <div class="md:w-3/4 md:pl-6">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Designing Dashboards</h4>
+                    <div class="flex items-center mb-3">
+                        <span class="bg-gray-800 text-white text-sm rounded-full px-3 py-1 mr-3">2020</span>
+                        <span class="text-gray-500">Dashboard</span>
+                    </div>
+                    <p class="text-black-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Work Item 2 -->
+            <div class="flex flex-col md:flex-row mb-8 border-b pb-8">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="img/images.jpeg" alt="Vibrant Portraits" class="rounded-sm">
+                </div>
+                <div class="md:w-3/4 md:pl-6">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Vibrant Portraits of 2020</h4>
+                    <div class="flex items-center mb-3">
+                        <span class="bg-gray-800 text-white text-sm rounded-full px-3 py-1 mr-3">2018</span>
+                        <span class="text-gray-500">Illustration</span>
+                    </div>
+                    <p class="text-black-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Work Item 3 -->
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="img/images (1).jpeg" alt="Malayalam type" class="rounded-sm">
+                </div>
+                <div class="md:w-3/4 md:pl-6">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">36 Days of Malayalam type</h4>
+                    <div class="flex items-center mb-3">
+                        <span class="bg-gray-800 text-white text-sm rounded-full px-3 py-1 mr-3">2018</span>
+                        <span class="text-gray-500">Typography</span>
+                    </div>
+                    <p class="text-black-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    <div>
+        <footer class="py-8 flex flex-col items-center">
+            <div class="flex space-x-6 mb-4">
+                <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">Copyright ©2020 All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
