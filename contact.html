@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Divisign</title>
+    <title>Contact</title>
     <script src="https://kit.fontawesome.com/ee8b546ce4.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- Google Fonts -->
@@ -37,15 +37,64 @@
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
         }
+
+        #menu-toggle {
+            display: none;
+        }
+        
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        #menu-toggle:checked ~ .menu-content {
+            max-height: 100vh;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
+    <nav class="container mx-auto px-4 md:px-20 py-6">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl md:text-4xl font-bold">Sadia's Portfolio</div>
+    
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex gap-8">
+                <a href="index.html" class="font-medium">Home</a>
+                <a href="works.html" class="font-medium">Works</a>
+                <a href="blog.html" class="font-medium">Blog</a>
+                <a href="contact.html" class="text-blue-600 visited:text-red-500 font-bold">Contact</a>
+            </div>
+    
+            <!-- Mobile Menu Toggle (Checkbox Hack) -->
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+                <label for="menu-toggle" class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+    
+                <!-- Mobile Navigation (Hidden by default, shown when checkbox is checked) -->
+                <div class="hidden peer-checked:block absolute top-16 right-4 bg-white shadow-lg p-4 rounded-lg">
+                    <div class="flex flex-col space-y-4">
+                        <a href="index.html" class="font-medium">Home</a>
+                        <a href="works.html" class="font-medium">Works</a>
+                        <a href="blog.html" class="font-medium">Blog</a>
+                        <a href="contact.html" class="text-blue-600 visited:text-red-500 font-bold">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!--Finished nav section-->
     <div class="max-w-3xl mx-auto px-4 py-16">
         <h1 class="text-5xl font-bold text-center mb-8">Contact Me</h1>
         
         <div class="text-center mb-6">
-            <a href="mailto:hello@divisign.com" class="text-4xl font-medium text-blue-600 hover:underline">
-                hello@divisign.com
+            <a href="mailto:sapeu.dev@gmail.com" class="text-4xl font-medium text-blue-600 hover:underline">
+                sapeu.dev@gmail.com
             </a>
             <p class="text-gray-600 mt-2">
                 Feel free to contact me with any inquiries or questions!
@@ -117,11 +166,6 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submission will be handled by contact.js');
-        });
-    </script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
